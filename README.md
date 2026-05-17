@@ -7,8 +7,7 @@ https://www.chiron-studios.com/products/chirons-disk-blaster-grey-or-gold-dryble
 
 Chiron's Disk Blaster is an modern desktop application for people who want to read and write real floppy disks for vintage computers using a clean and simple interface. It serves as a front-end for Greaseweazle, ZoomFloppy and even standard USB Floppy Drives, allowing the user to use one application across multiple solutions. 
 
-It's open-source and you can download the source and release on the GitHub:
-https://github.com/chironb/ChironsDiskBlaster
+It's open-source!
 
 It also provides enhanced support by converting files to and from whatever is needed by Greaseweazle. For example the ATR and 2MG are supported by converting the formats are not directedly supported by Greaseweazle using CiderPress2. You just have to show Chiron's Disk Blaster where to find your local installation of the various external tools used to bring it all together. 
 
