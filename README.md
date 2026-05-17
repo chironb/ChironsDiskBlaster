@@ -9,6 +9,12 @@ Chiron's Disk Blaster is an modern desktop application for people who want to re
 
 It's open-source!
 
+![Chiron's Disk Blaster Screenshot 1](https://raw.githubusercontent.com/chironb/ChironsDiskBlaster/refs/heads/main/screenshots/ChironsDiskBlaster_Screenshots_for_GitHub_1.png)
+
+![Chiron's Disk Blaster Screenshot 2](https://raw.githubusercontent.com/chironb/ChironsDiskBlaster/refs/heads/main/screenshots/ChironsDiskBlaster_Screenshots_for_GitHub_2.png)
+
+![Chiron's Disk Blaster Screenshot 3](https://raw.githubusercontent.com/chironb/ChironsDiskBlaster/refs/heads/main/screenshots/ChironsDiskBlaster_Screenshots_for_GitHub_3.png)
+
 It also provides enhanced support by converting files to and from whatever is needed by Greaseweazle. For example the ATR and 2MG are supported by converting the formats are not directedly supported by Greaseweazle using CiderPress2. You just have to show Chiron's Disk Blaster where to find your local installation of the various external tools used to bring it all together. 
 
 It provides relief from knowing and navigating all the complicated details around programs like Greaseweazle host tools and ZoomFloppy with OpenCBM. Unlike other GUIs, this program doesn't just show a bunch of controls for each and every command-line option. Instead it figures out a lot of the details for you, and if you try to do something that doesn't work, it'll prompt you before you do and actually try to make a disk. 
