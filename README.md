@@ -2,7 +2,8 @@
 
 Chiron's Disk Blaster is a slick front-end for Greaseweazle, ZoomFloppy and even standard USB Floppy Drives!
 
-Also buy the offical t-shirt!
+Also buy the official  t-shirt!
+
 https://www.chiron-studios.com/products/chirons-disk-blaster-grey-or-gold-dryblend%C2%AE-t-shirt
 
 Chiron's Disk Blaster is an modern desktop application for people who want to read and write real floppy disks for vintage computers using a clean and simple interface. It serves as a front-end for Greaseweazle, ZoomFloppy and even standard USB Floppy Drives, allowing the user to use one application across multiple solutions. 
