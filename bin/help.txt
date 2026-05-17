@@ -1,0 +1,542 @@
+--------------------------------------------------------------------------------
+Chiron's Disk Blaster - Help File
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Read Me Introduction
+--------------------------------------------------------------------------------
+
+Chiron's Disk Blaster is an modern desktop application for people who want to read and write real floppy disks for vintage computers using a clean and simple interface. It serves as a front-end for Greaseweazle, ZoomFloppy and even standard USB Floppy Drives, allowing the user to use one application across multiple solutions. 
+
+It also provides enhanced support by converting files to and from whatever is needed by Greaseweazle. For example the ATR and 2MG are supported by converting the formats are not directedly supported by Greaseweazle using CiderPress2. You just have to show Chiron's Disk Blaster where to find your local installation of the various external tools used to bring it all together. 
+
+It provides relief from knowing and navigating all the complicated details around programs like Greaseweazle host tools and ZoomFloppy with OpenCBM. Unlike other GUIs, this program doesn't just show a bunch of controls for each and every command-line option. Instead it figures out a lot of the details for you, and if you try to do something that doesn't work, it'll prompt you before you do and actually try to make a disk. 
+
+When you open or drag-and-drop a file onto the app it will identify the format automatically and set the family, computer, and drive. For the rare file that is genuinely ambiguous it will prompt you to clarify. A couple of clicks to tell it about your hardware and it's ready to read or a write a disk!
+
+The interface also has visual icons and elements that make it clear what you're doing. It shows the computer, a real world drive, an icon that shows the disk image file and what kind of floppy it's intended for, a read/write icon that shows direction information is flowing, and a hardware icon that embeds pictures of the current hardware settings. This gives you the ability of at-a-glance checking that you've correctly setup your job.
+
+Chiron's Disk Blaster supports a wide range of systems: 
+Commodore 8-Bit: PET / VIC-20 / 64 / 128 / and their CBM drives, Amiga, Apple II, Apple IIGS, and classic Macintosh, Atari 8-bit, Atari ST, BBC Micro, Acorn Archimedes, Dragon; Tandy CoCo, Olivetti, and standard MS-DOS / PC compatible formats.
+
+Keyboard shortcuts, configurable paths for all external tools, and smart safety checks, like preventing a format-first wipe when you meant to read a disk, keep things moving without gotchas.
+
+--------------------------------------------------------------------------------
+Software Licence
+--------------------------------------------------------------------------------
+
+This software is copyright (c) 2026 Chiron Bramberger and is released under a free software / open source licence by the FSF called GNU GPL 3. 
+
+More information can be found in the licence.txt that came with this program.
+
+--------------------------------------------------------------------------------
+Image Credits
+--------------------------------------------------------------------------------
+
+Much of the images that come with this software are original works that are copyright (c) 2026 Chiron Bramberger and is released under a free software / open source licence by the FSF called GNU GPL 3. This means that the images cannot be incorporated into other works that are not also licenced under the GNU GPL 3 terms.
+
+However there are also images that are derived from other sources that are compatible with a free software / open source licence.
+
+These assets are listed and credited in the credits.txt that came with this program.
+
+--------------------------------------------------------------------------------
+AI Generated Content
+--------------------------------------------------------------------------------
+
+Please note: This text is written by me. The Read Me Introduction text started as AI generated text but it sucked and I ended up rewriting it. For the rest of the document it would have taken me just as long to make a bulleted list of talking points to feed it into an LLM, and then manually edit out all the bullshit, as-opposed to taking the same time to just writing it myself! 
+
+--------------------------------------------------------------------------------
+Getting Started
+--------------------------------------------------------------------------------
+
+Platform
+--------
+
+Chiron's Disk Blaster uses OpenGL3, SDL2, Nuklear, and MINGW64 to create a light but performant and responsive user interface. You can resize the window and move around the under interface elements. It runs in v-sync mode which prevents screen tearing and limits the resources it uses to only rendering the interface once per frame. It loads all it's graphics on start-up. One can run multiple instances of the program as well. Additionally, because the program runs it's task in an external command-line window, you can exit Chiron's Disk Blaster once the task has successfully started. 
+
+You can also run multiple tasks at once as long as they are on different hardware interfaces. For example: I have had three disk being created by having Greaseweazle, ZoomFloppy, and a USB Floppy Drive all running at the same time in their own command-line windows.
+
+Please note: On Mesa3D and OpenGL (opengl32.dll)
+This version comes with the Mesa3D driver for Windows. This is an open-source library that provides software rendering capabilities to OpenGL applications. Note that software rendering is a LOT slower than 3D accelerators, so this library should only be used as a last resort, for older machines that may not have newer OpenGL driver support. For example my ThinkPad T420 has an Intel 3000 series CPU and build in GPU. Without this Mesa3D driver the program would not work on it, since Windows 11 stopped supporting OpenGL on this CPU/GPU combo. The Mesa3D driver means it will work as expected. However, it is much more efficient and performant to use your Windows 11 driver if you're computer isn't a 15 year old laptop. You can therefore rename or delete this file: opengl32.dll and Windows 11 will automatically use the system driver instead when Chiron's Disk Blaster runs. 
+
+Introduction and Motivations
+----------------------------
+
+I made this program to make my life easier. But then realized that I can't be the only one that got frustrated every time I went to go to anything with a floppy disk.
+
+Originally I had a KyroFlux which was very disappointing because it didn't support writing very many formats and it's licencing is intensely strict - the antithesis of the free-software and open-source movement. It's a licence that would have made a young Bill Gates blush while writing his scathing letter to the Home Brew Computer Club. Anyway I digress...
+
+One of the things that came out of using KyroFlux was how irritating the command-line parameters were. In fact I started keeping a huge list of notes of exactly how to read and write every format that mattered to me. In some cases things needed several steps of conversion and other data-massaging steps. But even without that, that fact that I needed a big cheat sheet, got me so enraged that I finally bought a Greaseweazle. It felt like a waste since I already had this expensive KyroFlux but once I got a Greaseweazle I've loved it so much ever since I've never looked back.
+
+However, even Greaseweazle has it's quirks. Additionally 100TPI drives, which are needed for some formats, are rare. I have a Commodore SFD-1001 and I can't use Greaseweazle to write disks for it unless I get one of those super-rare 100TPI PC floppy drives. I use ZoomFloppy for that instead. 
+
+This leads to be struggling with OpenCBM on the command-line. 
+
+Now, Steve Gray has made CBM-XFER which is a great GUI for ZoomFloppy and OpenCBM. But it's also a file manager. I often just need to read and write entire disks all at once. That's all. 
+
+That's what got me thinking: If all this stuff works over the command-line then I've got to be able to make a nice little GUI that speaks to both Greaseweazle and ZoomFloppy in the same interface. And once I've got a program doing that, then I've got to be able to have it do any extra conversions that are needed, so I can use it for formats that aren't normally supports. 
+
+Recently the FluxEngine software switched to a new interface based on ImHex. This new software has a tonne of features and I can see why the author went in this direction. However, I liked the original software for exactly the opposite reason: it was relatively easy to use.
+
+That's what got me started. All of this! It was a dozen or so pain points that I bumped into every time I wanted to make a disk or read disk. 
+
+So I made this program!
+
+-----
+
+This program is meant to make the process of dealing with floppy disks easy with a GUI that's actually intuitive. It does a lot of checking and the figuring out of things for you. I means there's less fiddly things to remember so you can get to whatever it is you're actually trying to do. Like test your new game on the new vintage system you've ported it to. 
+
+I basically wanted to drag-and-drop a disk and have it make it. And I wanted to reading of disks to be almost as easy. 
+
+The focus and purpose of this program is making the reading and writing of the most commonly used floppy disk formats easy. It is not focused on special formats, special copy protections, or even flux work. If you need to read and write flux files then I invite you to create your own workflows around that. 
+
+This program is not for the recovery of damaged disks, nor is it focused on the pristine archiving of every flux of a given floppy disk. 
+
+Instead this is for someone who just wants to read or make normal disks for common formats. 
+
+Most GUIs for Greaseweazle simply convert every command-line parameter into some kind of form element. From my perspective it's been easier to just use the command-line instead when the GUI is just replicating all of that anyway.
+
+What I wanted, and the motivation for this program, was an easy way to use floppy disks with a modern computer. To be able to actually make disks easily, use them and maybe write files to them on an old computer, and then read that floppy disk back into a computer. 
+
+I have a business selling new software for vintage computers and therefore the reading and writing of disks, and even the testing of floppy disks, is a big part of that. Therefore I wanted to tool to make my life easier. 
+
+That's why it supports smart drag-and-drop writing of floppy disks as this is a priority that almost every other software seems to overlook. Simply plug in a ZoomFloppy and an SFD-1001 disk drive, set your hardware to ZoomFloppy with device 8 being a SFD-1001, and then drag-and-drop a disk image D82 file onto the program. Then hit start. Now you're making a floppy disk. It's as simple as that! 
+
+Similarly for reading disks. Plug in a Greaseweazle and a 5.25-inch double-density drive, set the hardware to your setup, pick Commodore, it sets itself to default to C64 with a 1541 drive, and then set your filename. Then hit Start and it saves your disk to a D64 image file. 
+
+That's what I wanted: To actually use floppy disks with a modern computer instead of treating them like some ancient stone-tablet that's to be x-rayed once and stored in a museum basement somewhere for another hundred years. 
+
+Speaking of writing disk, KyroFlux has terrible support for writing disks, with the seeming mentality being that all anyone should ever do with a KyroFlux is image their own disks for their own personal use without helping anyone else nor making any money off of doing so in any way humanly possible. Never mind that it's not open-source - KyroFlux seems to be licenced with the *most* *restrictive* licence I know of. 
+
+In KyroFlux the writing of a few formats was seemingly treated as an afterthought and as such I was greatly disappointed with it overall. The licencing is so restrictive that you can't really use it for anything other that personal use - as far as I can understand it as someone who is not a lawyer. In fact you might not be allowed to make a YouTube video about KyroFlux if you have a Patreon account that you promote on the channel or if that video is even just monetized. Again I'm not a lawyer and this is not legal advice. It is however, an account of my feelings, and I feel that KyroFlux was an expensive purchase I greatly regret. Greaseweazle and ZoomFloppy are wonderful and I feel great appreciation for them respectively. 
+
+I have also created this program to be visually easy-to-understand with regard to the current state of the program. Icons clearly show the settings and mismatches between settings are be clear where possible. For example if you are trying to write a disk image file based on a 3.5-inch disk format, but you've set your task up for a 5.25-inch drive format, you'll see the icons show the different floppy disks.
+
+Likewise hardware settings are reflected in the hardware icon. For example: If you're trying make a 3.5-inch disk but you've set Greaseweazle as if you had a 5.25-inch drive plugged into it, then you will see that. Also, if you've set the PC Bus Drive Ident. as A, the Greaseweazle icon shows a cable with a twist in it; If it's set to B, then the icon shows a straight-through cable. 
+
+This is also true for ZoomFloppy. If you've chosen a disk image file, and you want to write a real floppy disk from it, and it's a disk meant for a 1581 drive, which is a 3.5-inch floppy, you'll see icons for that 3.5-inch setup. But then in ZoomFloppy if you've set it to 1541 by accident then the icon, that shows ZoomFloppy, also shows an image of a 1541 drive beside it. Therefore at a glance you can see that the format, shown with a 1581 icon, doesn't match the 1541 picture inside the ZoomFloppy icon. 
+
+It's difficult to describe but easy to see!
+
+An Introduction to Floppy Disk Imaging
+--------------------------------------
+
+There are several layers when it comes to reading or writing vintage floppy disks on a modern computer system. 
+
+The first layer is the idea of the target computer and disk drive. This is the intended vintage computer system, disk drive, and whatever formatting or DOS options are involved. For example the Commodore Amiga is often used with a 3.5-inch floppy disk drive and is formatted to about 880K worth of available space using the AmigaDOS OFS or FFS. 
+
+The second layer is the way one moves between old and new media. For example, if you want to read a vintage floppy disk on a modern computer you need a device that will let you do this. Here is a brief review: 
+
+Greaseweazle is, as of 2026, one of the most well known and best device to connect a floppy disk drive to a modern computer over a USB connection. 
+
+There is also FluxEngine which both supports Greaseweazle hardware as well as has it's own hardware solution. The initial release of Chiron's Disk Blaster does not support FluxEngine (yet) but it is none-the-less another noteworthy example. 
+
+Both Greaseweazle and FluxEngine are open-source licenced software. 
+
+KyroFlux is another solution, but it is a less capable solution, and suffers from a very problematic licence. Although I am not a lawyer, any reading of the KyroFlux licence makes it self-evident that it is restrictive, and is *so* restrictive and overly broad that you are not permitted to make any money from it in any way, nor do work for other people or organizations in any way. The is the opposite of sharing and being a good person in the spirit of the original GNU GPL licence. 
+
+ZoomFloppy is a great device from Retro Innovations / Go4Retro by Jim Brain that is affordable and effective. It allows a Commodore IEC or IEEE-488 based drive to communicate over that Commodore protocol via USB on a modern computer. It uses OpenCBM to do this and let's you read and write disk images, files, and even block level operations with your Commodore or compatible drive. 
+
+USB Floppy Drives are very limited but allow a modern computer to read and write, to some extent, to a 3.5-inch floppy disk that is either in double-density or high-density format.
+
+Chiron's Disk Blaster supports, as of the first version in 2026, Greaseweazle, ZoomFloppy and USB Floppy Drives.
+
+Each of these pieces of hardware has different drives, formats, and other features that are specific to that solution. This program tries to support the most commonly useful tasks when it comes to the reading and writing of full floppy disk images. 
+
+To review here is an example setup: 
+
+Layer 1 --> Commodore 64 and 1541 Floppy Disk Drive
+Layer 2 --> ZoomFloppy with a 1541 Disk Drive
+Layer 3 --> Modern PC with OpenCBM
+
+Chiron's Disk Blaster is a Graphical User Interface (GUI) front-end for these systems. In this example the program interacts with the user and, when they are ready, executes the command-line operations to complete a given task. For example: If you have a floppy disk with programs you've written in BASIC on your Commodore 64 saved with a 1541 then you can plug your 1541 Disk Drive into the ZoomFloppy, setup the task in Chiron's Disk Blaster, and press Start to begin reading that disk into your computer. When the command-line task completes you'll have a floppy disk image file saved to your computer where you specified in the program. 
+
+You can now use that disk image file for safe keeping, open it in an emulator, edit it with a disk image file manager, or use it to make additional copies of the disk using the same ZoomFloppy hardware. 
+
+All of this is important as Layer 3 needs to "know" what Later 1 is so the software reading or writing a disk know what you are trying to do. 
+
+Greaseweazle, for example, needs to know both the disk image file extension and the format so that is can properly write the disk. There are many disk image formats that have come about over the years to try and address the various needs of the vintage computing community. Many of these are ad-hoc standards that reflect a multitude of different formats. The Apple II format in particular is an example where the type of DOS used to create the disk will determine the order of the sectors writing to a given track. Greaseweazle, therefore, needs to know this information, so it can write back the sectors in the correct order. Unfortunately the file extensions DSK and IMG are so common, and used in so many different situations, that they are almost useless. If one has an Apple II disk image with the extension DSK it may or may not be an AppleDOS or ProDOS disk image. Actually it might be anything! Therefore, when Greaseweazle needs to read or write a disk, the *user* needs to tell it what format it is in. There are some file format that help. The .PO disk format should hold an ProDOS disk image. But, again, this whole world of computing comes from a time when things were not nearly as standardized as they are today. 
+
+This understanding is required so that you know why you need to do what you're doing in the program. I have made Chiron's Disk Blaster to make things as easy as possible given this crazy vintage floppy disk landscape. I hope I have done a good job and that it makes people's lives just a bit easier!
+
+--------------------------------------------------------------------------------
+Options and The Configuration File
+--------------------------------------------------------------------------------
+
+Downloading and Installing Supporting Software
+----------------------------------------------
+
+The following programs are needed to make this program work. You can download the software via their home pages on the world wide web via the links below: 
+
+Greaseweazle - v1.23
+https://github.com/keirf/greaseweazle
+
+CiderPress2 - v1.2.0
+https://ciderpress2.com/
+
+OpenCBM - v0.4.99.104
+https://spiro.trikaliotis.net/opencbm
+
+DD - v0.6beta3        
+http://www.chrysocome.net/dd
+
+Please note: For OpenCBM you need to, not only extract the files to a location on your computer where Chiron's Disk Blaster can find them, but you also need to install the USB drivers. Although a walk-through of this is beyond the scope of this guide, the short version is this:
+- Open a command-line prompt or Windows shell
+- Change directory to where ever you installed OpenCBM:
+cd "C:\Program Files\opencbm-0.4.99.104\"
+- Run the installer program:
+.\install.cmd
+(Note: The installer will ask to elevate privileges because it needs administrator rights to install the USB drivers.)
+- This should walk you through the process and at the end show that you've successfully installed OpenCBM.
+
+
+Configuration File and Options
+------------------------------
+
+Chiron's Disk Blaster has a configuration file. It's in the style of a simple classic .INI file. 
+
+This holds the most important information. Specifically everything that's needed to do anything with this program. 
+
+In order to read, write, or convert disks, the program needs several important external command-line programs. These are: 
+
+Greaseweazle --> greaseweazle-1.23
+CiderPress2  --> cp2_1.2.0_win-x64_sc
+OpenCBM      --> opencbm-0.4.99.104
+DD           --> dd-0.6beta3
+
+This is the default entry in the configuration file: 
+
+[External Paths]
+options_greaseweazle_path = "C:\Program Files\greaseweazle-1.23"
+options_ciderpress2cli_path = "C:\Program Files\cp2_1.2.0_win-x64_sc"
+options_opencbm_path = "C:\Program Files\opencbm-0.4.99.104\amd64"
+options_dd_path = "C:\Program Files\dd-0.6beta3"
+
+Although installing and getting all the software working is outside the scope of this help guide, in general you download the software and extract the zip file into a folder. You then copy that folder wherever you want it to live. If you choose the default locations then you shouldn't need to configure Chiron's Disk Blaster. If the program can't find all of the program it will warn you that there's nothing it can do. However, it doesn't warn you if you have at least one software package needed. I did this because some users will have only one way of making a floppy disk. For example you may have a Greaseweazle but not ZoomFloppy or USB Floppy Drive. 
+
+By default they are expected to be found in their folders in "C:\Program Files" but you can have them live anywhere. 
+
+You can set this using the program itself. If you open options there are paths and browse buttons that open the system dialog box for folder selection. 
+
+You can also edit the entries in the configuration file if you'd like as well. 
+
+Hit Save Options when you're done making changes. 
+
+Additionally the configuration file has the following entries that are *not* in the options menu: 
+
+[External Executables]
+options_greaseweazle_executable = "gw.exe"
+options_ciderpress2_cli_executable = "cp2.exe"
+options_opencbm_cbmctrl_executable = "cbmctrl.exe"
+options_opencbm_d64copy_executable = "d64copy.exe"
+options_opencbm_imgcopy_executable = "imgcopy.exe"
+options_opencbm_d82copy_executable = "d82copy.exe"
+options_dd_executable = "dd.exe"
+
+I decided that to remove these from the options menu because a user shouldn't need to change this. Setting the folder is easy and the right way to do it. However, if for some reason you'd like to, you can make that change. Please note if you give it some evil program then obviously it's going to run the bad program and you're gonna have a bad time!
+
+Please note: This program has not been writing with any security concerns in mind other than it behaving as a normal Windows 11 program. There is no expectation of major corporate use or fitness for prime-time production. It's an open-source utility designed to make doing floppy disk things easier. But with any program you download from the internet, please govern yourself carefully!
+
+Checking Software for the Hardware
+----------------------------------
+
+If you want to check if the program has found the software for the hardware you can do so in the Hardware window. At the top of each hardware entry in the windows there's a Info section that can be unfurled by clicking on the little triangle at the start. 
+
+Here's what you should find: 
+
+Greaseweazle --> Host Tools: 1.23
+OpenCBM      --> Version: 0.4.99.104
+DD           --> DD Version: 0.6beta3
+
+Please note: The program will warn you if CiderPress2 can't be found on start-up with a pop-up message box before the program starts. 
+
+Versions
+--------
+
+This program checks for versions of software when it starts but it doesn't prevent you from using those versions. Therefore please note that older versions of Greaseweazle, for example, my not support everything this program is expecting to be supported. 
+
+Background Color
+--------------------------------------------------------------------------------
+
+You can also set the background color if you'd like by editing the values in the configuration file or by using the color picker tool in Options. 
+
+--------------------------------------------------------------------------------
+Tasks - The Good Stuff
+--------------------------------------------------------------------------------
+
+Setting Up the Task - Reading a Disk
+------------------------------------
+
+Now that you understand the layers we can apply them to using the program. 
+
+There are so many options I've tried making it easy to drill down into the right format. The goal is to tell Greaseweazle, or ZoomFloppy, what kind of disk you're trying to read. Since there are hundreds of combinations of supported system I have created a three step process that quickly let's you drill-down to the format you are looking for.
+
+Fifth Combo-Box --> File to Floppy or Floppy to File
+----------------------------------------------------
+
+We are going to set this first since the program defaults to writing a floppy disk. 
+
+This is essentially the direction of the progress. Are we going from the physical floppy disk to a file on the modern computer? In this case, yes, we are. Therefore we are "reading" a floppy disk and "saving" the data to a file.
+
+This dropdown tries to make this as clear as possible. It's easy to get confused about what's being "read" or "loaded" or "saved" or "written".
+
+Therefore this drop-down has the options:
+File to Floppy - Which is loading a file and writing it to a real floppy disk. 
+Floppy to File - Which is reading a real floppy disk and saving it to a file.
+
+So for reading a disk select: Floppy to File
+
+First Combo-Box / Drop-Down --> Family (Brand)
+----------------------------------------------
+
+The very top drop down sets the system family. For example the Apple selection is for the pre-Macintosh systems from the Apple II to the Apple ///. The Commodore represents the 8-bit home computers, and the Amiga represents this line of machines. 
+
+Pick the family (or brand) of the computer system and drive you're looking for. 
+
+Doing this will set the computer and drive dropdowns below. 
+
+Second Combo-Box / Drop-Down --> System (Computer)
+--------------------------------------------------
+
+The is the second combo-box. It is on the far left of the second line of user-interface elements. This menu will now contain only computers from the family you've selected. If you picked Commodore then you will see many systems from the PET to the 128D. 
+
+Picking a computer from this combo-box will also set the drive to the commonly used drive for that computer system. However, this is only a time-saving measure. You can change it if required.
+
+Third Combo-Box / Drop-Down --> Format (Drive)
+-------------------------------------------------
+
+The is the third combo-box. It is on the far right of the second line of user-interface elements. 
+
+This selects the drive. This is where you can, if needed, change the current disk format to whatever you specifically need. 
+
+For example, if you pick Apple, then Apple II, then you'll have all the Apple II format available to you. However only you, dear user, will know if it's an AppleDOS or ProDOS disk image. It is this drive drop-down that is most important, as this is where you would select the ProDOS format, if that's in-fact what kind of disk you are reading. 
+
+Image Icons - Computer and Disk Drive
+-------------------------------------
+
+These image are illustrative and let you see, at a glance, what your current setup is within the program. If you picked Amiga 500 and A1010 as the disk drive, then you should see images for these. However you can also hover your mouse over the disk drive to get details about that format including heads, tracks, sectors, disk image file size, file extension, etc. This is can toggled on and off by pressing the 'T' keyboard shortcut. 
+
+Forth Combo-Box - File Selector
+-------------------------------
+
+Since we have already set the program to be reading a disk (Floppy to File) we can pick "Browse..." from the drop-down. This will open a system dialog box and let you set a file name for saving. Note: If you do not add a file extension will default to .IMG and warn you. This extension is super-duper useless and I recommend you know what you're actually reading and set a better file extension. In fact, you should be using the file extension that your drive selection is set to. For example if you picked an Amiga 500 computer then it'll default to A1010 (the Amiga's common external floppy drive model number) then you should see this in the drop-down: 
+
+A1010 DS/DD 880K ADF
+
+The last entry is the file extension. In this case it's an .ADF file and that tells you what you should name the file when you're setting up you save file in the system file selection dialog box. 
+
+Sixth Combo-Box - Chosen Hardware
+---------------------------------
+
+This let's you pick from (as of the first release of the this program in 2026) the currently supported hardware: 
+
+- Greaseweazle
+- ZoomFloppy
+- USB Floppy Drive
+
+Please note: certain formats are supported by certain hardware. This is hard to know off the top of your head! However, in general, Greaseweazle supports a lot of formats, and ZoomFloppy only Commodore compatible drives. 
+
+Also note that when you select the hardware in this drop-down, the hardware window updates to show the current settings for that hardware. This will become important in the next steps. 
+
+Setting Up the Hardware - Reading a Disk
+----------------------------------------
+
+If you selected Greaseweazle as the hardware selection when you'll be seeing the Greaseweazle setting on the left hand Hardware panel. 
+
+This is where you tell the program what hardware you have plugged into your Greaseweazle. Not only is this important so that the program knows how to call the Greaseweazle command-line process, but it also let's the program check to make sure you've set all the right settings based on the currently selected file and drive format. 
+
+You can go ahead and choose the type of drive, type of bus, how the drive is set, number of tracks the drive mechanism actually supports, and then the session settings of density and whether or not we are double-stepping. The details of this are beyond this help guide, however, the program will make several checks and it will try to only execute disk task if the settings are correct. It cannot know certain things and because of this making the correct settings are essentially.
+
+Please note: The program does a quick RPM check before writing a disk as check for the presence of the hardware and supporting software as well as the presence of an actual floppy disk in the connected drive. 
+
+Additional Buttons: 
+-------------------
+
+Verify Button: 
+
+If you have multiple drives connected and cannot remember which drive is connect to which end of the cable, you can press the Verify button, and it will do a single RPM check. This causes the drive to light up as it is being accessed and you can use this to check if you've set the correct drive. I did this because in testing it was driving me crazy and I realized that must be something that will happen to other people as well!
+
+Bandwidth Button:
+
+If you unfurl the top Info menu (press on the little left-hand triangle) you'll get information that will show you if the Greaseweazle software and hardware are installed. However, if you're having issues with reading or writing disks, it might be a USB port bandwidth issue. Things like USB hubs can cause things to run slower. Also some ports are slower. For example my modern motherboard has a special USB port that has a special protection circuit built-in. Turns out that this port is just too slow to properly run Greaseweazle tasks. 
+
+Therefore if you suspect an issue trying using this button to run a bandwidth test. A pop-up will display the results. 
+
+Advanced Options
+----------------
+
+If you need more retries for a problematic disk you can set this here. 
+
+Greaseweazle will not overwrite an existing file if it's been passed the "-no-clobber" parameter. You can disable this protection by setting Overwrite: to Allow by clicking the checkbox. 
+
+If you want to make starting a task a little faster you can disable the check for a floppy disk in the drive using the RPM feature. This is what Verify on Init: is for. Uncheck the checkbox that says enable. It will skip the test which is a little faster. 
+
+Setting Up the Task - Writing a Disk
+------------------------------------
+
+The manual process is exactly like the Reading a Disk steps above. 
+
+However, there are easier methods. 
+
+If you click the Open button at the very top Menu you can select a disk image on your computer and Chiron's Disk Blaster will attempt to identify the disk image and make the correct computer and drive format. 
+
+You can also drag-and-drop a disk image file onto the program and it will do the same thing: It will auto-detect the computer and drive format. 
+
+If you pass a disk image file when running the program, or if you associate a file format with this program, it will also auto-identify the disk image type. 
+
+Hardware Selection
+------------------
+
+Please note that when you change the current hardware selection in the Task window it will change what's unfurled in the Hardware window to show the settings for the current hardware. However, you can still expand or contract whatever you want in the window, without having to change the hardware selection in the Task window. 
+
+ZoomFloppy - Details
+--------------------
+
+Everything for reading and writing disks for Greaseweazle applies to ZoomFloppy except the hardware window settings. 
+
+The info menu, if you unfurl it, will show the software version of OpenCBM as well as the number of devices that were connected when the program was first started. 
+
+In general when using ZoomFloppy, you need to match the actual disk drive that's connected, to the disk format you've selected. However, there are situation where a Commodore compatible drive supports multiple formats. This is beyond the scope of this help guide, however, here's a brief list: 
+
+1541/1541-II/2040/3040/4040/4031/2031 --> Supports 1541 D64 disk image files. *Sort of.
+1570     --> Supports 1541 D64 disk image files.
+1571     --> Supports 1541 D64 and 1571 D71 disk image files. 
+1581     --> Supports 1581 D64 disk image files.
+8050     --> Supports 8050 D80 disk image files.
+8250     --> Supports 8050 D80, and 8250 D82 disk image files.
+SFD-1001 --> Supports 8050 D80, and 8250 D82 disk image files.
+
+*There is a small but non-trivial difference between disks made with drives like the 4040 series drives and the 1541. In general they have a certain amount of intercompatibility but it is recommended to research this issue if you are working with both kinds of drives. 
+
+ZoomFloppy - Settings
+---------------------
+
+Set the IEC Device #: to the value that you've set on your Commodore compatible drive. Please note that, in general, drives that do not have switches for this default to device 8.
+
+Now that you understand the drives and compatibilities you can make the correct setting in IEC Drive: drop-down. 
+
+Check: Scan
+
+If you forget what you've set your drive to, or even what drive you plugged in, then the Scan button beside Check: will open a pop-up message box that will show all the connected devices and their device numbers. 
+
+Note: If you're thinking that the software could set this automatically then I'd like to explain why it doesn't: There are certain drives that can and can't read or write different formats and the program can't know what you're trying to do in all cases. Nor does it know which drive to use if multiple drives are connected that could service the current job. Since the workflow is to use the Hardware window to tell the program what hardware you've connected to it, I wanted to stay true to that workflow. Having the program make the Greaseweazle or ZoomFloppy hardware settings for you means the program has to TELL YOU WHAT TO DO essentially. So it's possible to automate even more of the program, but that switches the role of the user from telling the program what hardware is connected. to the program telling the user what hardware SHOULD BE connected. And that's not how things should be. However, in the future, I may think through various approaches. I'm thinking that maybe the user could setup an inventory of drives that they have, and the program could then scan that inventory, and then tell the user what and how to connect it. But again, I don't love that idea, and I think keeping the user engaged with the hardware settings is the better user experience. 
+
+The following settings help in certain situations: 
+
+Reset of Init: If you enable this by clicking the checkbox then when the task runs it will reset the IEC bus first before doing anything else. This helps in case the IEC bus is in a weird state or if you cancelled a previous job by closing the command-line window before it completed. 
+
+Format First: If you enable this by clicking the checkbox then before writing to a disk it will format that disk first. This is because these Commodore drives will not let the block writing that happens for a whole disk image because the disk is not formatted. This takes time, however, so if you know the disk is already formatted then you can disable this a skip the step saving some time. However, please note that if you're using a drive that can read or write single-sided or double-sided disks, then you need to format first if you previously formatted it differently. For example if you use a 1571 to format a disk in double-sided mode, and then want to write a 1541 disk image which is single sided (or vice-versa), then you should enable this to format it first. The program will format the disk in whatever format the drive drop-down is set to. 
+
+BAM-Only: If you enable this by clicking the checkbox then when OpenCBM reads or writes the disk it will only copy the relevant blocks that are allocated. This means it's only going to image the files that exist and the BAM (Block-Allocation-Map). It creates the same disk but skips writing empty blocks. Please note: I think really old drives may not like this setting. I have a Commodore 4040 that's so early in production that it's got the 3040 CBM DOS on it and it doesn't seem to like this mode sometimes. I think I remember that correctly but I might be wrong. In any case, this setting is great because it makes things much faster, but it might cause some compatibility issues in some rare edge-cases. 
+
+USB Floppy Drive - Settings
+---------------------------
+
+These devices are very simple. As of the first release of Chiron's Disk Blaster in 2026 the USB Floppy Drive only supports MS-DOS & PC Compatible disk images for 3.5-inch drives. That means it's just 720K and 1.44M disk images. 
+
+In the future this list may expand. I'm not sure if DD on Windows can read and write to disks that aren't in MS-DOS & PC Compatible formats, such as the Atari 16-Bit formats that are very close to that format. 
+
+Note: There are also weirdo formats that I've chosen not to support for now. In the future the MS-DOS & PC Compatible weirdo formats will get their own family entry. This is because these weirdo format are uncommon, but make selecting the drive more difficult. For example when I use the FluxEngine GUI software I can never remember what's what because there's too many options. I myself often forget what a "normal" 3.5-inch DD MS-DOS & PC Compatible format is, so in the interests of focusing on the most common tasks for the most people, I've decided to leave them out for now and maybe add them in the future update. 
+
+Format First: Like the other hardware, this formats the disk before running the task of writing the disk image. Enabling helps when the media is not formatting and Windows doesn't want to let DD do it's thing. Disabling makes this faster by skipping the formatting step. 
+
+Tip: Windows 11 loves to access the USB Floppy Drives when you don't want it to. That means that when you try to run the task sometimes it doesn't work. Setting it to format first helps if you answer the prompts quickly enough. Sometimes it's better to *not* set it to format first. I'm sorry but you have to play with it. In future maybe there's a better way around avoiding this issue; it was a rare enough issue that I put it on my future to-do list for this program. 
+
+The settings are fairly straight-forward. 
+
+You set the drive letter. It's either A: or B: because I wanted to make sure the program doesn't run DD on your boot drive or personal data drive. Most of the time drive letters are still reserved for floppy disk drives. 
+
+Please note: If no floppy drive is connected the task will not run DD to try and read or write a floppy disk image. The program uses Windows 11 calls to check the hardware and actually pull the USB device name and confirm it's a real floppy drive. It does *not* just try to see if there's an A: drive or a B: drive but instead does Windows 11 things to figure out if it's a real USB Floppy Drive.
+
+WARNING: Although this shouldn't be an issue please be aware of it! For some reason if you are on a system that has had someone manually set a hard drive as A: or B: then I can't be sure what having DD running on it will do. Since this is very unlikely I decided the functionality was worth it and safe enough but if someone tries real hard I'm sure this could potentially create an issue. Please note: If you do not have *ANY* USB Floppy Drive plugged in the program will not attempt to run the DD command-line task. Therefore, again, this warning applies to the following scenario: A computer, with an important hard drive, configured as drive A: or drive B:, with an attached USB Floppy Drive that therefore does not have drive letter A: or B: assigned to it, and is scanned successfully by the software. This is so rare it's really not worth addressing since this whole disk imaging thing is a power-user type of activity and not for the average user. 
+
+The Floppy Size sets the block sound and block size to their defaults for that floppy size. 
+
+The Block Count and Block Size can be left as their defaults. However, if you really want to change them, you can. Setting one changes the other. If you set one manually, the other one updates, and vice-verse. This is because the overall size has to match the Floppy Size you've set before.
+
+The main benefit of changing the block size is that bigger blocks tend to make the overall process a little faster. I've created defaults that are big enough to be pretty fast but small enough that you get an actual progress remaining percentage that is helpful. I believe you can do it all in one or two fat blocks but I don't know how much time that really saves since it's the spinning disk that is the main bottleneck.
+
+--------------------------------------------------------------------------------
+Final Thoughts
+--------------------------------------------------------------------------------
+
+I made this program to make my life easier. It did. Then I turned it into a whole product. That way it can make your life easier! I hope it does. 
+
+In the future I'd be open to getting and supporting more hardware types, turning this program into a ultimate floppy disk imaging tool! But that takes time and money. 
+
+It's open-source. It's also on my store. You can donate to the cause at the store and it'll email the release package. You can also buy a t-shirt with the Chiron's Disk Blaster logo on it. I think it's looks pretty cool!
+
+Donation Release
+(LINK)
+
+Chiron's Disk Blaster T-Shirt
+(LINK)
+
+Or you can download it on my GitHub.
+
+Thanks! I appreciate you!
+
+--------------------------------------------------------------------------------
+Future Possible Hardware Support
+--------------------------------------------------------------------------------
+
+This software is currently meeting 99% of my needs at this moment. 
+
+However, if people would like to support this project, they can do so by browsing my store: 
+
+https://www.chiron-studios.com/
+
+Here is a list of things I would like to support: 
+
+FluxEngine
+https://cowlark.com/fluxengine/index.html
+
+KyroFlux
+https://www.kryoflux.com/
+
+SuperCard Pro
+https://www.cbmstuff.com/index.php?route=product/product&product_id=52
+
+Applesauce / Applesauce+
+https://applesaucefdc.com/
+
+Adafruit Floppy
+https://github.com/adafruit/Adafruit_Floppy
+
+Device Side Data's FC5025 USB 5.25" Floppy Controller (read-only)
+http://www.deviceside.com/fc5025.html
+
+Buying up all the hardware out there, and then spending the time to support it is no trvial task. Testing of the disks read or written to on actual vintage hardware is also a big task. Donations of vintage hardware, or modern hardware, or code, or even well photographed pictures of vintage hardware would be greatly appreciated! 
+
+You can reach out to me via email here: 
+chiron@bramberger.com
+
+Thanks!
+
+--------------------------------------------------------------------------------
+
+Links: 
+
+Greaseweazle - v1.23
+https://decromancer.ca/greaseweazle/
+https://github.com/keirf/greaseweazle
+
+FluxEngine
+https://cowlark.com/fluxengine/index.html
+https://github.com/davidgiven/fluxengine
+
+ZoomFloppy
+https://store.go4retro.com/zoomfloppy/
+https://github.com/go4retro/ZoomFloppy
+
+OpenCBM - v0.4.99.104
+https://spiro.trikaliotis.net/opencbm
+
+KyroFlux Restrictive Licence
+https://www.kryoflux.com/download/LICENCE.txt
+
+CiderPress2 - v1.2.0
+https://ciderpress2.com/
+
+DD - v0.6beta3        
+http://www.chrysocome.net/dd

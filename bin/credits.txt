@@ -1,0 +1,402 @@
+/*****************************************************************************/
+/* Credits Document */
+/*****************************************************************************/
+
+This documents lists files that were taken from free-software and open-source 
+compatible sources. 
+
+Thanks to Steve Gray who took some custom pictures for me just for the project 
+and has released them under the GNU GPL 3! The CBM 128-80 picture is taken from 
+a model in his extensive and impressive collection! 
+
+/*****************************************************************************/
+/* Images - Overview */
+/*****************************************************************************/
+
+All the image icons of systems and drives were modified to make them look less
+yellowed due to photodegradation, to make logo colors pop once they are reduced
+to icon size, to remove scratches and scuffs, and finally isolated from any 
+background. 
+
+/*****************************************************************************/
+/* Images - Licence: GNU GPL 3 */
+/*****************************************************************************/
+
+For all images Copyright (C) Chiron Bramberger they are released under the 
+GNU GPL 3 licence with the understanding that if these images incorporated 
+within a larger work, that work must also be released under the GNU GPL 3. 
+This means any application, video, image, or any other medium in which one
+could reasonably incorporate an image.  
+
+/*****************************************************************************/
+/* Images - Modified Images from Wikimedia */
+/*****************************************************************************/
+
+The following files were heavily modified. In some cases I have rebuilt major
+parts of the image that were covered or flipped images to appear at an angle
+matching the other photos which involved rebuilding the parts that would
+look odd being flipped. I will try to outline the major reworks below. For 
+everything else the images were simply reduced in size, enhanced for contrast
+and color at an icon size, and otherwise tweaked or had LEDs artifically 
+illuminated.
+
+- APPLE_BELLHOWELL.png was replicated from the Wikipedia image of a common
+  Apple II Plus. The logo was made bigger and brighter to make it pop once
+  it was reduced to icon size. 
+
+- APPLE_III.png was heavily edited to make it look less yellow due to 
+  photodegradation while making the colorful labels and logo pop. 
+  Although all images were treated to removing yellowing, this particular
+  image needed a lot of it, so I am mentioning it here. 
+
+- CBM_C64GS.png was very heavily changed. The original image was partially 
+  covered by a joystick and was facing turned in the other direction compared
+  to the other images. I rebuilt almost the entire image to replace the 
+  missing parts as well as flipping it around and then unflipped the elements
+  that would not look correct if they were not flipped back. For example the 
+  labels would need to be restored so the text is readable. In any case if 
+  one compares the original image of the one in the program it might appear
+  to be a completely different image taken from a different angle. This is why.
+
+- ATARIST_ST354.png and ATARIST_ST314.png are from the referenced Wikimedia 
+  image. However they were heavily modified since they are partially covered
+  up by the computer in front of them in the original picture. Additionally 
+  only one kind of drive appears in the photo. The other drive image was 
+  fabricated by modifying the LED and eject button to resemble the other 
+  model. Note: The external drive was completely fabracted with details 
+  mentioned in the next section. 
+
+- DRAGON_32.png, DRAGON_64.png, and DRAGON_TANO.png are all the same photo 
+  with recreations of the different labels applied. 
+
+- OLIVETTI_M20_525_DRIVE.png was completely fabricated. I could not find a 
+  single example of an Olivetti external drive anywhere. It is just the 
+  drive face from the Olivetti image grafted onto the image of an clone
+  Apple Disk ][ enclosure by Shamrock, a Canadian Apple-II clone company. 
+
+/*****************************************************************************/
+/* Images - Additional Creations from My Photos */
+/*****************************************************************************/
+
+The following files were created by from photos of physical mockups or by
+taking one or more of my photos and reworking it to appear to be a different
+system or drive. I am making notes of this below so that someone does not get
+the impression there is some rare vintage computer hardware that has been
+previously undocumented. 
+
+- AMIGA_1500.png was created from a photo of my Amiga 2000.
+
+- BBC_MICRO.png is of an unmodified North-American edition. This is being 
+  mentioned because it is extremely rare and therefore might have some 
+  previously undocumented design changes. However, at the size the icons are 
+  displayed at, this should be of little consequence. But just in case!
+
+- MAC_128K was made by modifying a photo of my Macintosh Plus. 
+
+- CBM_128D.png was created by starting with photos of the Amiga 1000 and also 
+  a photo of a Commodore 1571 disk drive. I do not have a Commodore 128D 
+  and could not find an image online that would look good so this was 
+  fabricated. Since this is a rare machine I want to make sure nobody is out 
+  there looking for some rare prototype 128D that does not exist because of
+  what is effectively a totally fabricated image. 
+
+- PC_80286.png is actually a picture of a Commodore PC10-II which did not 
+  have HD 5.25-inch drives but later models did and at this same icon size
+  it looks like AT era machines that would have had a HD 5.25-inch drive.
+
+- PC_80486.png is an actual photo of the first PC I ever built for myself 
+  back in high-school around 1995 or so. That design of case was very common
+  for that era and many PC compatible machines continued to use cases that 
+  were actually like that or very similar. Since PC compatibles are so 
+  varied it is hard to find something to represent each era. 
+  This machine will works by-the-way!
+
+- AMIGA_DRIVE_A4K.png was created from a photo of my Amiga 4000 internal 
+  high-density drive that was grafted onto a photo of an external enclosure. 
+  It was intended to replicate the look of an actual real drive that exists
+  without perfectly replicating it. Therefore do not look for this drive in 
+  real life as it does not exist.
+
+- ACORN_35_DRIVE_LIGHT.png, ACORN_35_DRIVE_LIGHT_2.png and 
+  ACORN_35_DRIVE_DARK.png were all just photos of my external drives in
+  enclosures I designed and 3D printed for drives I use with Greaseweazle. 
+  I grafted on the Acorn logo to make it match the system image but these
+  drives never existed. In fact I do not know of any example of an Acorn
+  Archimedes external floppy drive. Therefore consider these illustrative.
+
+- ATARIST_INT.png was fabricted just like the Amiga HD external drive. In 
+  fact that image was the starting point. The face of the drive was then 
+  changed to match the look of the internal HD 3.5-inch drives in Atari ST
+  machines. 
+
+- BBC_DRIVE_525_SS.png was created by cobbling together a mock-up of this 
+  drive and then the image was modified to match the actual BBC Micro 
+  drive as it has a different look than a typical Shugart drive and needs
+  the BBC Micro logo. 
+
+- BBC_DRIVE_525_DS.png is a picture of my actual BBC Micro drive from my
+  North American machine. That is an actual 5.25-inch 80-track drive and 
+  came with the Acorn logo on the front. I have not seen any pictures of 
+  that drive online so I have no idea if it is rare like the computer
+  or common. 
+
+- CBM_DRIVE_2040.png, CBM_DRIVE_3040.png, and CBM_DRIVE_4040.png are actually
+  not quite what they appear. I have two 4040 drives. One is VERY early with
+  low serial number around 160 and actually runs the same CBM DOS that the 
+  2040 and 3040 run. It also does not have a power LED like most 4040 drives
+  do, nor does it have the "drive 0" and "drive 1" labels that most other 
+  4040 drives have. So I took a photo of my early 4040 and made that the 
+  2040 and 3040 drives. I then took at picture of my later 4040 and that is
+  the 4040 used for the icon picture in this program. 
+
+- CBM_DRIVE_4031.png is actually my CBM_DRIVE_2031.png but with a slight 
+  edit to make the label look like a 4031. 
+
+- CBM_DRIVE_1551.png and CBM_DRIVE_1570.png are total fabrications made from 
+  photos of my 1541 and SFD-1001. I do not own either drive so this was 
+  needed and since they look similar is design it was better than using this 
+  as an excuse to aquire yet another Commodore floppy disk drive. 
+
+- CBM_DRIVE_1581.png is a photo of my drive. However, I would like to note that
+  this is drive is a recreation. I bought a real Commodore 1581 empty unused case
+  from when Commodore was scrapping 1581 drive meches for use in Amiga sales
+  and there was a lot for sales as surplus for many years. I also aquired a 
+  broken 1571 and used that for most of the need chips as I bought a replica 
+  PCB. I put an Amiga drive inside just as an original would and got a little
+  original PCB with the front LEDs from Tom Luff and was able to finally  
+  assemble a 1581 where the only part that was a replica was the PCB. Well...
+  ...the power connector was a MIDI connector I melted into a 4-pin DIN that
+  fits the Commodore 1581 power supply connector. :-)
+
+- CBM_DRIVE_8250.png is actually a photo of my 8050 used for CBM_DRIVE_8050.png   
+  but modified with different LEDs illuminated so that it looks a little 
+  different since both drives look very similar. 
+
+- CBM_DRIVE_SFD1001.png is a picture of my drive that got from Sid Bolton and 
+  came with device number switches modded on the side. I modified them for them
+  picture but I have kept that drive as it was when I got it from Sid. It has
+  been repaired but other than that it is still the way it was when I got it. 
+
+- PC_DRIVE_525_DD.png is a picture of a 5.25-inch DD drive I have. I think that
+  black drives are a reflection of what was common during this era. 
+  PC compatibles are so common and varied I simply tried to find examples that
+  would reflect what was most common. 
+       I also added a DD logo for this both to make it clear and because it 
+  would be impossible to know for a PC drive otherwise. This logo is a complete 
+  invention of myself and does not actually exist elsewhere. I tried to match the
+  look and feel of the HD logo to make something that matches yet makes it clear
+  what the user is looking at. PC drives were so varried that any picture would 
+  not make it clear what kind of drive it was in the same way a picture of a 
+  Commodore 1541 would be clear. Note: I created SD, DD, QD all in the HD style. 
+
+- PC_DRIVE_525_HD.png is a picture of a 5.25-inch DD drive I have. It is a 
+  light beige color which most of the HD drives from that era were so I chose
+  this drive to represent that even though it is really just a DD drive. 
+       I also added the HD logo for this both to make it clear and because it 
+  would be impossible to know for a PC drive otherwise. This logo was only ever
+  used on 3.5-inch HD disks to make it clear what they were. Using it like 
+  this never happened in real life. I have simplyed used this to make things
+  as clear as possible for the user. PC drives were so varried that any picture
+  would not make it clear what kind of drive it was in the same way a picture 
+  of a Commodore 1541 would be clear. 
+
+- PC_DRIVE_35_DD.png is a picture of a 3.5-inch HD drive I have. I chose this 
+  because the look of an external drive that like to me, looks, very old and 
+  matches the DD era of these drives. 
+       I also added a DD logo for this both to make it clear and because it 
+  would be impossible to know for a PC drive otherwise. This logo is a complete 
+  invention of myself and does not actually exist elsewhere. I tried to match the
+  look and feel of the HD logo to make something that matches yet makes it clear
+  what the user is looking at. PC drives were so varried that any picture would 
+  not make it clear what kind of drive it was in the same way a picture of a 
+  Commodore 1541 would be clear. 
+
+- PC_DRIVE_35_HD.png is a picture of a 3.5-inch HD drive I have. I chose this 
+  drive because it is the most common looking HD drive that would have never
+  actually been an external drive like this. Therefore this look alludes to 
+  the drives that were almost exclusively installed in PC cases at this point 
+  in history. I think it works. 
+       I also added the HD logo for this both to make it clear and because it 
+  would be impossible to know for a PC drive otherwise. They were so varried
+  that any picture would not make it clear what kind of drive it was in the 
+  same way a picture of a Commodore 1541 would be clear. 
+
+/*****************************************************************************/
+/* Images - Systems */
+/*****************************************************************************/
+
+// Load images for: Systems - Amiga
+"assets/images/systems/AMIGA_1000.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/AMIGA_500.png"   --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/AMIGA_600.png"   --> CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Commodore_Amiga_600_top.png
+"assets/images/systems/AMIGA_1200.png"  --> CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Commodore_Amiga_A1200.jpg
+"assets/images/systems/AMIGA_1500.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger 
+"assets/images/systems/AMIGA_2000.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/AMIGA_2500.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/AMIGA_3000.png"  --> Released into the public domain (by the original author) - https://commons.wikimedia.org/wiki/File:Amiga_3000_Front_with_White_BG.jpg
+"assets/images/systems/AMIGA_3000T.png" --> CC BY-SA 3.0 DE - https://commons.wikimedia.org/wiki/File:Amiga_3000T-040_(cropped).jpg
+"assets/images/systems/AMIGA_4000.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/AMIGA_4000T.png" --> CC0 1.0 - https://commons.wikimedia.org/wiki/File:Amiga_4000T.jpg
+"assets/images/systems/AMIGA_CDTV.png"  --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:CDTV.jpg
+"assets/images/systems/AMIGA_CD32.png"  --> Released into the public domain (by the original author) - https://commons.wikimedia.org/wiki/File:Amiga-CD32-wController-L-TRSP.png
+
+// Load images for: Systems - Apple II
+"assets/images/systems/APPLE_1.png"          --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/APPLE_II.png"         --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/APPLE_IIPLUS.png"     --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/APPLE_BELLHOWELL.png" --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:Apple_II_Plus.jpg
+"assets/images/systems/APPLE_IIE.png"        --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/APPLE_IIE_PLAT.png"   --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:Apple_Platinum_IIe.jpg
+"assets/images/systems/APPLE_IIC.png"        --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/APPLE_IIGS.png"       --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/APPLE_III.png"        --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:Apple_III%2B.jpg
+
+// Load images for: Systems - Archimedes
+"assets/images/systems/ACORN_ARC_A310.png"  --> CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Acorn_Archimedes_A310_with_mouse_and_keyboard.jpg
+"assets/images/systems/ACORN_ARC_A5000.png" --> CC BY 2.0 - https://commons.wikimedia.org/wiki/File:15kHz_Atari_screen_on_Acorn_A5000_(4212017289).jpg
+
+// Load images for: Systems - Atari 8-Bit
+"assets/images/systems/ATARI8_400.png"    --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:Atari-400-Comp.jpg
+"assets/images/systems/ATARI8_800.png"    --> Released into the public domain (by the original author) - https://commons.wikimedia.org/wiki/File:Atari-800-Computer-FL.jpg
+"assets/images/systems/ATARI8_1200XL.png" --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Atari_1200XL.jpg
+"assets/images/systems/ATARI8_600XL.png"  --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Atari-600XL-PC.jpg
+"assets/images/systems/ATARI8_800XL.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/ATARI8_130XE.png"  --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Atari-130XE.jpg
+"assets/images/systems/ATARI8_XEGS.png"   --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Atari_XEGS.jpg
+
+// Load images for: Systems - Atari ST
+"assets/images/systems/ATARIST_520.png"    --> CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Atari_520_ST_%2B_with_monochrome_monitor_SM_124.jpg
+"assets/images/systems/ATARIST_1040.png"   --> CC-BY-2.5 - https://commons.wikimedia.org/wiki/File:Atari_1040STf.jpg
+"assets/images/systems/ATARIST_MEGA.png"   --> GNU Free Documentation License, Version 1.2 - https://commons.wikimedia.org/wiki/File:Atari-mega-ste.jpg
+"assets/images/systems/ATARIST_TT030.png"  --> Released into the public domain (by the original author) - https://commons.wikimedia.org/wiki/File:Atari_TT030.JPG
+"assets/images/systems/ATARIST_FALCON.png" --> GNU Free Documentation License, Version 1.2 - https://commons.wikimedia.org/wiki/File:Atari_Falcon_030_(white_bg).jpg
+
+// Load images for: Systems - BBC Micro
+"assets/images/systems/BBC_MICRO.png"      --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/BBC_MASTER.png"     --> CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Acorn_BBC_Master_Series.jpg"assets/images/systems/BBC_MASTER_COMPACT.png" --> 
+"assets/images/systems/ACORN_ELECTRON.png" --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:Acorn_Electron_4x3.jpg
+
+// Load images for: Systems - Commodore
+"assets/images/systems/CBM_PET_2001.png" --> CC BY 2.0 - https://commons.wikimedia.org/wiki/File:Commodore_PET_2001_(2).jpg
+"assets/images/systems/CBM_PET_3008.png" --> CC BY 2.0 - https://commons.wikimedia.org/wiki/File:Commodore_CBM_2001_%26_8050.jpg
+"assets/images/systems/CBM_PET_4016.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_PET_4032.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_PET_8032.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_128_80.png"   --> Licence GNU GLP 3 - Copyright (C) Steve Gray
+"assets/images/systems/CBM_SUPERPET.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_VIC20.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_64.png"       --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_64C.png"      --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_C64GS.png"    --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:C64GS-Console-Set.jpg
+"assets/images/systems/CBM_SX64.png"     --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_116.png"      --> CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Commodore_116_Cont%C3%A9_(transparent_bg)_(shadow).png
+"assets/images/systems/CBM_16.png"       --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_PLUS4.png"    --> GNU Free Documentation License, Version 1.2 - https://commons.wikimedia.org/wiki/File:Commodore_Plus_4.jpg
+"assets/images/systems/CBM_128.png"      --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/CBM_128D.png"     --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Systems - Macintosh
+"assets/images/systems/MAC_128K.png"          --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/MAC_PLUS.png"          --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/MAC_SE.png"            --> CC BY-SA 2.5 - https://commons.wikimedia.org/wiki/File:Macintosh_SE_b.jpg
+"assets/images/systems/MAC_SE30.png"          --> CC BY-SA 2.5 - https://commons.wikimedia.org/wiki/File:Se30.jpg
+"assets/images/systems/MAC_CLASSIC.png"       --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/MAC_CLASSIC_II.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/MAC_COLOR_CLASSIC.png" --> CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Macintosh_Colour_Classic_1994_(retouched).jpg
+"assets/images/systems/MAC_PORTABLE.png"      --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Systems - pccompat
+"assets/images/systems/PC_8088.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/PC_80286.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/PC_80386.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/systems/PC_80486.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Systems - Tandy CoCo
+"assets/images/systems/TANDY_COCO_1.png" --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:TRS-80_Color_Computer_1_4x3.jpg
+"assets/images/systems/TANDY_COCO_2.png" --> CC BY 3.0 - https://commons.wikimedia.org/wiki/File:TRS-80_Color_Computer_2_(PAL)_4x3.jpg
+"assets/images/systems/TANDY_COCO_3.png" --> Released for any purpose - https://commons.wikimedia.org/wiki/File:TRS-80_Color_Computer_3.jpg
+
+// Load images for: Systems - Dragon
+"assets/images/systems/DRAGON_32.png"   --> CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Dragon_32.jpg
+"assets/images/systems/DRAGON_64.png"   --> CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Dragon_32.jpg
+"assets/images/systems/DRAGON_TANO.png" --> CC BY-SA 2.0 - https://commons.wikimedia.org/wiki/File:Dragon_32.jpg
+
+// Load images for: Systems - Dragon
+"assets/images/systems/OLIVETTI_M20.png" --> CC BY-SA 4.0 - https://mupin.it/olivetti-m20/
+
+
+/********************************************************************************/
+// Images - Drives
+/********************************************************************************/
+
+// Load images for: Drives - Amiga
+"assets/images/drives/AMIGA_DRIVE_1010.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/AMIGA_DRIVE_A4K.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - Apple II
+"assets/images/drives/APPLEII_DRIVE_525.png"   --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/APPLEIIC_DRIVE_525.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/APPLEII_DRIVE_525.png"   --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/MAC_DRIVE_35_DS_1M4.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - Archimedes
+"assets/images/drives/ACORN_35_DRIVE_LIGHT.png"   --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/ACORN_35_DRIVE_LIGHT_2.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/ACORN_35_DRIVE_DARK.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - Atari 8-Bit
+"assets/images/drives/ATARI8_DRIVE_810.png"   --> CC BY-SA 4.0 - https://en.wikipedia.org/wiki/File:TCMI_Atari810_front.jpg
+"assets/images/drives/ATARI8_DRIVE_1050.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/ATARI8_DRIVE_XF551.png" --> CC BY 4.0 - https://commons.wikimedia.org/wiki/File:XF551_disk_drive_front.jpg
+
+// Load images for: Drives - Atari 8-Bit
+"assets/images/drives/ATARIST_ST354.png" --> CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Atari_520_ST_%2B_with_monochrome_monitor_SM_124.jpg
+"assets/images/drives/ATARIST_ST314.png" --> CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Atari_520_ST_%2B_with_monochrome_monitor_SM_124.jpg
+"assets/images/drives/ATARIST_INT.png"   --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - BBC Micro
+"assets/images/drives/BBC_DRIVE_525_SS.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/BBC_DRIVE_525_DS.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - Commodore
+"assets/images/drives/CBM_DRIVE_2040.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_3040.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_4040.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_2031.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_4031.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_1541.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_1541II.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_1551.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_1570.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_1571.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_1581.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_8050.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_8250.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/CBM_DRIVE_SFD1001.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - macintosh
+"assets/images/drives/MAC_DRIVE_35_SS_400K.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/MAC_DRIVE_35_DS_800K.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/MAC_DRIVE_35_DS_1M4.png"  --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - PC Compatibles 
+"assets/images/drives/PC_DRIVE_525_DD.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/PC_DRIVE_525_HD.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/PC_DRIVE_35_DD.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/PC_DRIVE_35_HD.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - PC Compatibles 
+"assets/images/drives/TANDY_COCO_FULLHEIGHT.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/TANDY_COCO_40TRACK.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/TANDY_COCO_80TRACK.png"    --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/TANDY_COCO_35INCH.png"     --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - Dragon
+"assets/images/drives/DRAGON_525_ORIGINAL_DRIVE.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger  
+"assets/images/drives/DRAGON_525_CUMANA_DRIVE.png"   --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+// Load images for: Drives - olivetti
+"assets/images/drives/OLIVETTI_M20_525_DRIVE.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+"assets/images/drives/OLIVETTI_M20_525_DRIVE.png" --> Licence GNU GLP 3 - Copyright (C) Chiron Bramberger
+
+/********************************************************************************/

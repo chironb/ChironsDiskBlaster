@@ -1,0 +1,7 @@
+#include <windows.h>
+
+// This sets the .exe icon (Explorer + taskbar).
+IDI_ICON1 ICON "icon.ico"
+
+// This is the "main application icon" ID Windows looks for by default.
+1 ICON "icon.ico"
